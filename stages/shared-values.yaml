@@ -1,0 +1,28 @@
+image:
+  tag: v0.18.0
+
+sidecar:
+  enabled: false
+
+query:
+  storeDNSDiscovery: true
+  sidecarDNSDiscovery: false
+
+store:
+  enabled: true
+  serviceAccount: "thanos-store"
+
+bucket:
+  enabled: true
+  serviceAccount: "thanos-store"
+
+compact:
+  enabled: true
+  serviceAccount: "thanos-store"
+
+objstore:
+  type: S3
+  config:
+    endpoint: s3.us-east-1.amazonaws.com
+    sse_config:
+      type: "SSE-S3"
