@@ -1,0 +1,7 @@
+query:
+  stores: 
+    - dnssrv+_n0._tcp.envoy
+
+objstore:
+  config:
+    bucket: aws-metrics-storage
