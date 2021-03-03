@@ -4,4 +4,4 @@ query:
 
 objstore:
   config:
-    bucket: aws-metrics-storage
+    bucket: prod-aws-metrics-storage
