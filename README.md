@@ -6,7 +6,15 @@ Chart Reference - https://github.com/banzaicloud/banzai-charts/tree/master/thano
 
 Table of Contents
 =================
-
+   * [helm-thanos](#helm-thanos)
+   * [Table of Contents](#table-of-contents)
+      * [Pre-requisites](#pre-requisites)
+         * [Namespace](#namespace)
+      * [AWS](#aws)
+         * [IAM](#iam)
+            * [Service Account](#service-account)
+         * [Config Updates](#config-updates)
+      * [Install/Upgrade Chart](#installupgrade-chart)
 
 ## Pre-requisites
 
