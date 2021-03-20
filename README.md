@@ -120,7 +120,7 @@ In `aws-prod-values.yaml` file available inside `stages/prod` folder, add values
 |||
 |--|--|
 |bucket |Metrics bucket name |
-|stores |By default, it has DNS SRV record to the envoy proxy running in the same cluster. You can additionally provide DNS names to Thanos sidecar instances running in other clusters. |
+|stores |By default, it has DNS SRV record to the envoy proxy running in the same cluster. You can additionally provide DNS names to Thanos sidecar instances running in other clusters.<br/>Refer https://github.com/thanos-io/thanos/blob/main/docs/service-discovery.md#dns-service-discovery for more details |
 
 ## Install/Upgrade Chart
 
