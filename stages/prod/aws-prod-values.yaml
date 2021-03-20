@@ -4,4 +4,5 @@ query:
 
 objstore:
   config:
-    bucket: prod-aws-metrics-storage
+    # AWS S3 metrics bucket name
+    bucket: 
