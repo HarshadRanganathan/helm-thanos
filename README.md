@@ -26,9 +26,9 @@ Create a new namespace `platform` where we will install thanos.
 kubectl create namespace platform
 ```
 
-## AWS
+### AWS
 
-### IAM
+#### IAM
 
 We need to give permissions for Thanos store and compact to manage the metric files in S3.
 
