@@ -1053,6 +1053,8 @@ sidecar:
   enabled: true
   selector:
     app: prometheus
+  # Namespace where the sidecar is running
+  #   namespace: ""
   # Enable metrics collecting for sidecar service
   metrics:
     # Enable ServiceMonitor https://github.com/coreos/prometheus-operator
