@@ -7,6 +7,7 @@ Chart Reference - https://github.com/banzaicloud/banzai-charts/tree/master/thano
 Table of Contents
 =================
    * [helm-thanos](#helm-thanos)
+      * [Dependencies](#dependencies)
       * [Pre-requisites](#pre-requisites)
          * [Namespace](#namespace)
          * [AWS](#aws)
@@ -14,6 +15,10 @@ Table of Contents
             * [Service Account](#service-account)
          * [Config Updates](#config-updates)
       * [Install/Upgrade Chart](#installupgrade-chart)
+
+## Dependencies
+
+[1] Envoy proxy - https://github.com/HarshadRanganathan/helm-envoy-proxy
 
 ## Pre-requisites
 
