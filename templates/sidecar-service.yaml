@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "thanos.componentname" (list $ "sidecar") }}-grpc
+  namespace: {{ .Values.sidecar.namespace | default .Release.Namespace }}
   {{- with .Values.sidecar.grpc.service.annotations }}
   annotations: {{ toYaml . | nindent 4 }}
   {{- end }}
@@ -37,6 +38,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "thanos.componentname" (list $ "sidecar") }}-http
+  namespace: {{ .Values.sidecar.namespace | default .Release.Namespace }}
   {{- with .Values.sidecar.http.service.annotations }}
   annotations: {{ toYaml .| nindent 4 }}
   {{- end }}
