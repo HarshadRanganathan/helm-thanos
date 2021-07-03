@@ -2,11 +2,12 @@ image:
   tag: v0.18.0
 
 sidecar:
-  enabled: false
+  enabled: true
+  namespace: platform
 
 query:
   storeDNSDiscovery: true
-  sidecarDNSDiscovery: false
+  sidecarDNSDiscovery: true
 
 store:
   enabled: true
