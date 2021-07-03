@@ -78,7 +78,7 @@ spec:
         - "--store=dnssrv+_grpc._tcp.{{ include "thanos.componentname" (list $ "store") }}-grpc.{{ .Release.Namespace }}.svc.cluster.local"
         {{- end  }}
         {{- if .Values.query.sidecarDNSDiscovery }}
-        - "--store=dnssrv+_grpc._tcp.{{ include "thanos.componentname" (list $ "sidecar") }}-grpc.{{ .Release.Namespace }}.svc.cluster.local"
+        - "--store=dnssrv+_grpc._tcp.{{ include "thanos.componentname" (list $ "sidecar") }}-grpc.{{ .Values.sidecar.namespace | default .Release.Namespace }}.svc.cluster.local"
         {{- end  }}
         {{- if .Values.query.ruleDNSDiscovery }}
         - "--store=dnssrv+_grpc._tcp.{{ include "thanos.componentname" (list $ "rule") }}-grpc.{{ .Release.Namespace }}.svc.cluster.local"
