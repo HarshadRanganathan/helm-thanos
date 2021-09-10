@@ -1,6 +1,8 @@
 query:
   stores: 
     - dnssrv+_n0._tcp.envoy
+  extraArgs:
+    - "--rule=dnssrv+_n0._tcp.envoy"
 
 objstore:
   config:
