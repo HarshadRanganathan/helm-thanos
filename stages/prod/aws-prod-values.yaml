@@ -3,6 +3,7 @@ query:
     - dnssrv+_n0._tcp.envoy
   extraArgs:
     - "--rule=dnssrv+_n0._tcp.envoy"
+    - "--rule=dnssrv+_grpc._tcp.thanos-sidecar-grpc.platform.svc.cluster.local"
 
 objstore:
   config:
