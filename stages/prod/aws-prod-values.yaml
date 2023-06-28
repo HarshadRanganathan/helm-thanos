@@ -5,6 +5,22 @@ query:
     - "--rule=dnssrv+_n0._tcp.envoy"
     - "--rule=dnssrv+_grpc._tcp.thanos-sidecar-grpc.platform.svc.cluster.local"
 
+store:
+  # Data volume for the thanos-store to store temporary data
+  dataVolume:
+    backend:
+      persistentVolumeClaim:
+        claimName: store-data-volume
+  # Create the specified persistentVolumeClaim above.
+  persistentVolumeClaim:
+    name: store-data-volume
+    spec:
+      storageClassName: gp2
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 200Gi
+
 objstore:
   config:
     # AWS S3 metrics bucket name
